@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {profileService} from 'src/app/profile.service'
+
 
 @Component({
   selector: 'app-repositories',

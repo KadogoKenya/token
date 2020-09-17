@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {profileService} from 'src/app/profile.service'
+
 
 @Component({
   selector: 'app-profile',
@@ -9,8 +11,8 @@ export class ProfileComponent implements OnInit {
   user: any;
   userRepos:any;
   username: string = 'KadogoKenya'
-  imageWidth: number = 130;
-  imageHeight: number = 170;
+  imageWidth: number = 150;
+  imageHeight: number = 150;
 
   constructor(private profileService: profileService) { 
     
