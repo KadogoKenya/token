@@ -19,7 +19,9 @@ export class HomePageComponent implements OnInit {
 
   searchGitHub(searchbar){
     this.service.searchGithub(searchbar).then{
-      
+      ()=>{
+        this.githubs=this.service.githubs;
+      }
     }
   }
 
