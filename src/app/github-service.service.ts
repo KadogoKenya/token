@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { User } from './user';
-import { Github } from './github';
+// import { Github } from './github';
 
 
 @Injectable({
@@ -10,8 +10,8 @@ import { Github } from './github';
 })
 export class GithubServiceService {
 
-  githubs:Github[]=[];
-
+  users:User[]=[];
+  // users:User;
   constructor(private http: HttpClient) {}
 
   searchGithub(searchbar:String) {
@@ -23,10 +23,10 @@ export class GithubServiceService {
       name:string;
     }
     let promise=new Promise((resolve, reject)=>{
-      this.http.get<data>('https://api.github.com/users/' + searchbar + '?access_token=' + environment.apiKey).toPromise().then(
+      this.http.get('https://api.github.com/users/' + searchbar + '?access_token=' + environment.apiKey).toPromise().then(
         (results) => {
-          this.githubs = [];
-          this.githubs.push(results);
+          this.users = [];
+          this.users.push();
           console.log (results)
           resolve()
         },

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Github } from '../github';
+// import { Github } from '../github';
 import { GithubServiceService } from '../github-service.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +10,7 @@ import { GithubServiceService } from '../github-service.service';
 })
 export class HomePageComponent implements OnInit {
 
-  githubs:Github[];
+  users:User[];
   constructor(public service:GithubServiceService) { }
 
   ngOnInit() {
@@ -18,14 +19,16 @@ export class HomePageComponent implements OnInit {
   }
 
   searchGitHub(searchbar){
-    this.service.searchGithub(searchbar).then{
+    this.service.searchGithub(searchbar).then(
       ()=>{
-        this.githubs=this.service.githubs;
-        console.log(this.githubs);
+        this.users=this.service.users;
+        console.log(this.users);
       },
-      (error);
+      (error)=>{ 
+        console.log(error)
+      }
       
-    }
+    )
   }
 
 }

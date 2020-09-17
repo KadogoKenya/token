@@ -3,17 +3,15 @@
         <h2>Welcome to Token Acsess</h2>
     </div>
     <div class="container">
-        <app-token-form (emitSearch)= "searchToken"()></app-token-form>
+        <app-token-form (emitSearch)= "searchGitHub($event)"></app-token-form>
     </div>
-
-
 <!-- displaying contents -->
 <div class="container">
     <div class="row">
         <div class="col md-6">
             <div class="card">
-                <div *ngFor github of githubs>
-                    <img src= "{{github.avatar_url}}" width="150" height="150">
+                <div *ngFor user of users>
+                    <img src= "{{user.avatar_url}}" width="150" height="150">
                 </div>
             </div>
         </div>
@@ -21,12 +19,12 @@
             <h3>GitHub Token Details</h3>
             <div class="card">
                 <div *ngFor github of githubs>
-                    <p>username:&nbsp;{{github.username}} </p>
-                    <p>name:&nbsp;{{github.name}} </p>
-                    <p>followers:&nbsp;{{github.followers}} </p>
-                    <p>following:&nbsp;{{github.following} </p>
-                    <p>date joined:&nbsp;{{github.date}} </p>
-                    <p><a href=" {{github.html_url}} " target='blank' ><button type="button btn btn-info">View Repos Here</button></a></p>
+                    <p>username:&nbsp;{{user.username}} </p>
+                    <p>name:&nbsp;{{user.name}} </p>
+                    <p>followers:&nbsp;{{user.followers}} </p>
+                    <p>following:&nbsp;{{user.following} </p>
+                    <p>date joined:&nbsp;{{user.date}} </p>
+                    <p><a href=" {{user.html_url}} " target='blank' ><button type="button btn btn-info">View Repos Here</button></a></p>
                 </div>
             </div>
         </div>
