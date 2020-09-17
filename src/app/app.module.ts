@@ -6,28 +6,31 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GitNavbarComponent } from './git-navbar/git-navbar.component';
-import { TokenFormComponent } from './token-form/token-form.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { NavbarComponent } from './navbar/navbar.component';
+
+
+// import { HttpClientModule} from '@angular/common/http';
+import { TimeAgoPipe} from './time-ago.pipe'
 import { ProfileComponent } from './profile/profile.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { HighlightDirective} from  './highlight.directive';
+import { NavbarComponent } from './navbar/navbar.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitNavbarComponent,
-    TokenFormComponent,
-    HomePageComponent,
-    NavbarComponent,
     ProfileComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    HighlightDirective,
+    TimeAgoPipe,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
