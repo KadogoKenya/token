@@ -23,7 +23,12 @@ export class GithubServiceService {
           name:string;
         }
         let promise=new Promise((resolve, reject)=>{
-          this.http.get<data>('https://api.github.com/users/' + searchbar + '?access_token=' + environment.apiKey).toPromise().then(response=>{
+          this.http.get<data>('https://api.github.com/users/' + searchbar + '?access_token=' + environment.apiKey).toPromise().then(
+            (results) => {
+              this.githubs
+            }
+          )
+          
           
           })
         })
