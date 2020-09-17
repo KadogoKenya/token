@@ -16,8 +16,17 @@ export class GithubServiceService {
     private http: HttpClient) {
       searchGithub(searchbar:String) {
         interface data {
-          login
+          login:string;
+          username:string;
+          avatar:string;
+          html_url:string;
+          name:string;
         }
+        let promise=new Promise((resolve, reject)=>{
+          this.http.get<data>('https://api.github.com/users/' + searchbar + '?access_token=' + environment.apiKey).toPromise().then(response=>{
+          
+          })
+        })
       }
      }
 }
