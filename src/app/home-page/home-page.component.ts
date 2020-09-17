@@ -8,6 +8,7 @@ import { Github } from '../github';
 })
 export class HomePageComponent implements OnInit {
 
+  githubs:Github[];
   constructor() { }
 
   ngOnInit(): void {
