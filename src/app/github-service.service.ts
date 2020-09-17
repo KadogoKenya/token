@@ -36,8 +36,8 @@ export class GithubServiceService {
         }
       )      
     })
-      return promise;
+    return promise;
   }
-  }
+}
 
     
