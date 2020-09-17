@@ -14,6 +14,10 @@ export class GithubServiceService {
 
   constructor(
     private http: HttpClient) {
-      searchGithub(searchbar)
+      searchGithub(searchbar:String) {
+        interface data {
+          login
+        }
+      }
      }
 }
