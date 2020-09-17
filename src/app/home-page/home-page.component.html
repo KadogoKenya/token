@@ -21,7 +21,12 @@
             <h3>GitHub Token Details</h3>
             <div class="card">
                 <div *ngFor github of githubs>
-                    
+                    <p>username:&nbsp;{{github.username}} </p>
+                    <p>name:&nbsp;{{github.name}} </p>
+                    <p>followers:&nbsp;{{github.followers}} </p>
+                    <p>following:&nbsp;{{github.following} </p>
+                    <p>date joined:&nbsp;{{github.date}} </p>
+                    <p><a href=" {{github.html_url}} " target='blank' ><button type="button btn btn-info">View Repos Here</button></a></p>
                 </div>
             </div>
         </div>
