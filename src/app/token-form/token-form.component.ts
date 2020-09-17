@@ -12,13 +12,13 @@ export class TokenFormComponent implements OnInit {
 
   searchbar: string;
 
-  constructor() { 
+  constructor() {}
 
   search() {
     this.emitSearch.emit(this.searchbar);    
   }
-  }
-  ngOnInit(): {
+  
+  ngOnInit():  {
   }
 
 }
