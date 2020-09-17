@@ -18,7 +18,7 @@ export class TokenFormComponent implements OnInit {
     this.emitSearch.emit(this.searchbar);    
   }
   
-  ngOnInit():  {
+  ngOnInit(){
   }
 
 }
