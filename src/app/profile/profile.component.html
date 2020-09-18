@@ -41,12 +41,14 @@
         </div>
         <div class="card-body" *ngFor="let repo of userRepos">
             <div class="card row">
-                <div class="card-body">
-                    <h3>{{repo.name}}</h3>
-                    <p>Created: {{repo.created_at | dateAgo}}</p>
-                    <p>Language Used: {{repo.language}}</p>
-                    <p>{{repo.description}}</p>
-                    <span><a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">View Project</a></span>
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <h3>{{repo.name}}</h3>
+                        <p>Created: {{repo.created_at | dateAgo}}</p>
+                        <p>Language Used: {{repo.language}}</p>
+                        <p>{{repo.description}}</p>
+                        <span><a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">Find in Github</a></span>
+                    </div>
                 </div>
             </div>
         </div>
